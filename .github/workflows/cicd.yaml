@@ -39,8 +39,8 @@ jobs:
       - name: Update Deployment manifest
         run: |
           echo "Updating image tag in deployment.yaml"
-          sed -i "s/myrepo:.*myrepo:${{ github.run_number }}/g" deploymentfiles/deployment.yaml
-          echo "Updated deployment.yml content:"
+          sed -i "/githubactions_repo:.*githubactions_repo:${{ github.run_number }}/g" deploymentfiles/deployment.yaml
+          echo "Updated deployment.yaml content:"
           cat deploymentfiles/deployment.yaml
 
       - name: Commit and push deployment file
