@@ -14,7 +14,7 @@ jobs:
       - name: Sonarqube scan
         run: |
          mvn sonar:sonar \
-         -Dsonar.host.url=http:// \
+         -Dsonar.host.url=http://54.235.9.96:9000/ \
          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
       - name: Build maven
