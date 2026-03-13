@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: webcont
-          image: venkateshwarlur/myrepo:venkat
+          image: venkateshwarlur/githubactions_repo:venkat
 
           ports:
             - containerPort: 8080
