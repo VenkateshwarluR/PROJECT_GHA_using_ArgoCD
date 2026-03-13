@@ -1,5 +1,5 @@
 FROM maven as buildstage
-RUN /opt/webapp
+RUN mkdir /opt/webapp
 WORKDIR /opt/webapp
 COPY . .
 RUN mvn clean install
